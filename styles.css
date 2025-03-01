@@ -1,0 +1,61 @@
+/* style.css */
+body {
+    text-align: center;
+    background-color: #1a1a2e;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    margin-top: 100px;
+}
+
+.glow {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ffd700; }
+    to { text-shadow: 0 0 20px #ffdd00; }
+}
+
+#heartButton {
+    color: red;
+    font-size: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#heartContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: fall 3s linear;
+}
+
+@keyframes fall {
+    from { transform: translateY(-10px); opacity: 1; }
+    to { transform: translateY(100vh); opacity: 0; }
+}
